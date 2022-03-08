@@ -261,8 +261,8 @@ class Auth extends MY_Controller
         $config = [
             'protocol'  => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_user' => 'ayobersuaraevoting@gmail.com',
-            'smtp_pass' => '<>()*&^bersuara0890*',
+            'smtp_user' => '',
+            'smtp_pass' => '',
             'smtp_port' => 465,
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
@@ -271,7 +271,7 @@ class Auth extends MY_Controller
 
         $this->email->initialize($config);
 
-        $this->email->from('ayobersuaraevoting@gmail.com', 'Verifikasi User Ayo Bersuara E-Voting');
+        $this->email->from('email', 'Verifikasi User Ayo Bersuara E-Voting');
         $this->email->to($this->input->post('email'));
 
         //COBA BUAT TEMPLATE
